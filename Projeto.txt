@@ -1,0 +1,72 @@
+--- OBJETIVOS DO TRABALHO ---
+    1. Listar todos os elementos de cada uma das tabelas. --- OK! ---
+    
+    2. Listar as tarefas permitindo selecionar um período, ou colaborador, ou projeto. 
+        corrigir função pesquisa tarefa:
+            if filtro == 1
+            * chamar função pesquisa por período inicial e final
+            if filtro == 2
+            * chamar função pesquisa por colaborador -- OK! --
+            if filtro == 3
+            * chamar função pesquisa por projeto -- OK! -- 
+            
+        corrigir chamada função
+            Selecione um filtro:
+            1. pesquisar por período
+            2. pesquisar por colaborador
+            3. pesquisar por projeto
+
+    3. Listar colaboradores sem tarefas atribuídas.
+            Colaboradores  - pesquisa
+            1. Pesquisar em todos os registros 
+            2. 
+
+    4. Listar projetos com tarefas em aberto.
+        pesquisa por tarefa sem data de conclusão
+
+
+
+--- MINIMUNDO ---
+A empresa LPII trabalha com projetos de desenvolvimento. Para isso, sua equipe de desenvolvedores
+acessa um sistema para verificar os projetos e suas tarefas. 
+Cada colaborador da empresa é um usuário no sistema, com seu ID, nome e idade cadastrados. Cada usuário 
+possui um tipo (dev, gerente, etc) que também deve ser cadastrado dentro do sistema, com um ID, descrição
+do tipo de usuário e sigla. 
+Os projetos são organizados individualmente, e os usuários devem ter acesso ao nome do projeto, sua sigla e
+o nome do gerente responsável (que deve estar vinculado ao seu ID). 
+Cada projeto têm tarefas a serem realizadas pelos colaboradores. Para isso, as tarefas possuem um ID e uma
+sigla individuais, descrição, uma data de início, de previsão de conclusão e de conclusão real, além do nome
+do colaborador que deve executá-la. Cada tarefa é vinculada ao ID do projeto a que pertence, e ao ID do usuário
+responsável.
+O sistema deve permitir o acesso a todas as informações, pesquisas pelas informações cadastradas e sua 
+manipulação (atualização, exclusão). Além disso, o usuário também deve ser capaz de cadastrar novas informações.
+É importante que as tarefas possam ser filtradas pelas datas, mostrando assim os projetos em aberto.
+O sistema informar quais usuários estão ociosos, organizando os colaboradores pelas tarefas atribuídas a eles.
+
+
+
+--- MENU ---
+* Colaboradores *
+* Projetos *
+* Tarefas *
+* Usuários *
+* Voltar *
+
+--- SUBMENU ---
+* Inserir *
+* Atualizar *
+* Pesquisar *
+* Excluir *
+* Voltar *
+
+
+--- CHAVES ESTRANGEIRAS ---
+*Colaboradores*
+Tipo usuário -> IDTU
+
+*Projetos*
+Colaborador -> IDC
+
+*Tarefas*
+Projeto -> IDP
+Colaborador -> IDC
